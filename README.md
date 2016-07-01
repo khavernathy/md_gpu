@@ -4,7 +4,7 @@ Douglas Franz and Alfredo Peguero
 ==================================
 
 To download, use
-git clone https://github.com/khavernathy/md_gpu
+`git clone https://github.com/khavernathy/md_gpu`
 
 To compile (so far)
 g++ FM3.1.cpp -lm -o t -I. -std=c++11
