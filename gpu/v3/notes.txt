@@ -1,0 +1,3 @@
+nvcc md_gpu.cu -lm -o go; ./go
+ 
+to compile
