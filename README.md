@@ -16,7 +16,9 @@ To run:
 ========== GPU ========================
 To compile (on a CUDA host):
 `module load apps/cuda/7.5`
+
 `deviceQuery` (optional)
+
 `nvcc md_gpu.cu -o executable`
 
 To run: 
