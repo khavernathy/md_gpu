@@ -31,4 +31,8 @@ Access v_final folder for the complete program.
 
 To run: 
 
-`./executable [filename] [N particles, int] [box x, double] [box y, double] [box z, double]`
+`./executable [filename] [N particles, int] [box x, double] [box y, double] [box z, double] [block size, int]`
+
+e.g.
+
+`./go water_500.dat 1527 30 30 30 256` // The box dimensions are irrelevant (for now). Will be used later for PBC.
