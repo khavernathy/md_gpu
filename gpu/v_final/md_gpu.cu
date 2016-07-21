@@ -254,22 +254,22 @@ void runMD(atom * atom_list, int n, double ts, double tf,double dimx, double dim
 		cudaEventCreate(&stop);
 		cudaEventRecord( start, 0 );
                 	// RUN THE MD GPU KERNELS
-			//int c = 0;
+			int c = 0;
 			for (double t=0.0; t <= tf; t+=ts) {
 				// kernel functions for MD
                 		useTheForce<<< dimGrid, dimBlock >>>( d_atom_list, ts, n,dimx,dimy,dimz );
 				calculateForce<<< dimGrid, dimBlock,block_size*sizeof(atom) >>>( d_atom_list, ts, n,dimx,dimy,dimz);
-				/*
+				
 				// OUTPUT TURNED OFF FOR TIME ANALYTICS TESTING	
 				// extract data from GPU, write to output file, and print progress, as needed.
-				if (c%1 == 0)
+				if (c%10 == 0)
 				{
 					cudaMemcpy(atom_list, d_atom_list, atoms_size, cudaMemcpyDeviceToHost);
 					write(atom_list, t, c, n);
 					double prg = t/tf * 100;
 					printf("Step #: %7i done;  Progress: %3.2f %%\n",c,prg);
 				}
-				c++;*/
+				c++;
                 		
 			}
 		// fetch kernel runtime
@@ -367,7 +367,7 @@ int main(int argc, char **argv)
 	int block_size=atoi(argv[6]);	 // block size, e.g. 256 threads.
 	System system; 
 	double ts = 0.1e-15; // time step 1e-15 = 1 femptosecond.
-	double tf = 1e-15; // final time to calculate.
+	double tf = 1000e-15; // final time to calculate.
 	
 	// variable and memory assignments
 	atom_list = (atom *)malloc(sizeof(atom)*n);
