@@ -21,11 +21,13 @@ To run:
 
 To compile (on a CUDA host):
 
-`module load apps/cuda/7.5`
+`module load apps/cuda/7.5` // or whatever CUDA module you have/need
 
-`deviceQuery` (optional)
+`deviceQuery` (optional, to get device information)
 
-`nvcc md_gpu.cu -o executable`
+Access v_final folder for the complete program.
+
+`nvcc md_gpu.cu -o executable` // to recompile. An already compiled executable "go" is included.
 
 To run: 
 
