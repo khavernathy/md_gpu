@@ -1,3 +1,5 @@
+A video demonstrating GPU MD using this code can be found here: https://www.youtube.com/watch?v=IPQzY34eCt4
+
 This is a GPU MD code.
 Douglas Franz and Alfredo Peguero
 2016.
