@@ -1,6 +1,7 @@
 A video demonstrating GPU MD using this code can be found here: https://www.youtube.com/watch?v=IPQzY34eCt4
 
-This is a GPU MD code.
+This is a GPU MD code made for a graduate course project. 
+My ongoing and more awesome Monte Carlo/Molecular Dynamics code can be found here: https://github.com/khavernathy/mcmd
 Douglas Franz and Alfredo Peguero
 2016.
 ==================================
